@@ -3,7 +3,9 @@ $(document).ready(function() {
   var workTime = 12;
   var state = "";
   var counter;
-  var ding = new Audio("../src/media/alarm.mp3");
+  var ding = new Audio("../src/media/End.mp3");
+  var ready = new Audio("../src/media/get_ready.mp3");
+  var attack = new Audio("../src/media/shotgun.mp3");
 
   // Reset to original values
   $(".reset").on("click", function() {
@@ -62,8 +64,8 @@ $(document).ready(function() {
     var time = toSeconds(val);
     counter = setInterval(function() {
       time = time - 1;
-      if (time == 3) {
-        ding.play();
+      if (time == 5) {
+        ready.play();
       }
       if (time <= 0) {
         $(".getToWork").addClass("hidden");
@@ -76,7 +78,7 @@ $(document).ready(function() {
   }
 
   function breakTimer(val) {
-    ding.play();
+    attack.play();
     $(".takeABreak").removeClass("hidden");
     $(".breakTimer").animate({ width: "100%" }, toSeconds(val) * 1000);
     $(".breakTimer").queue(function() {
