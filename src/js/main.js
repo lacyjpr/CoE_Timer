@@ -5,7 +5,7 @@ $(document).ready(function() {
   var counter;
   var ding = new Audio("/CoE_Timer/media/End.mp3");
   var ready = new Audio("/CoE_Timer/media/get_ready.mp3");
-  var attack = new Audio("/CoE_Timer/media/shotgun.mp3");
+  var attack = new Audio("/CoE_Timer/media/fire-truck.mp3");
 
   // Reset to original values
   $(".reset").on("click", function() {
