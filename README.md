@@ -1,6 +1,6 @@
 https://lacyjpr.github.io/CoE_Timer/
 
-Convention of Elements timer for Demon Hunters
+Convention of Elements timer for Diablo 3 Demon Hunters
 
 Sound Credits:
 "Change Light Bulb Sound" by Mike Koenig, http://soundbible.com/2116-Change-Light-Bulb.html
