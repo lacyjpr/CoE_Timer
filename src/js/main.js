@@ -62,6 +62,9 @@ $(document).ready(function() {
     var time = toSeconds(val);
     counter = setInterval(function() {
       time = time - 1;
+      if (time == 3) {
+        ding.play();
+      }
       if (time <= 0) {
         $(".getToWork").addClass("hidden");
         $(".progress").animate({ width: "0%" }, 0);
@@ -97,7 +100,7 @@ $(document).ready(function() {
     var arr = val.split(":");
     var minutes = arr[0];
     var seconds = arr[1];
-    return parseInt(seconds) + parseInt(minutes); //* 60;
+    return parseInt(seconds) + parseInt(minutes) * 60;
   }
 
   function toMinutes(val) {
