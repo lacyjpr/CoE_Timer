@@ -67,7 +67,6 @@ $(document).ready(function() {
         $(".progress").animate({ width: "0%" }, 0);
         clearInterval(counter);
         breakTimer("00:" + breakTime);
-        //ding.play();
       }
       $(".content").html(toMinutes(time));
     }, 1000);
@@ -85,7 +84,6 @@ $(document).ready(function() {
     counter = setInterval(function() {
       time = time - 1;
       if (time <= 0) {
-        //ding.play();
         $(".takeABreak").addClass("hidden");
         $(".breakTimer").animate({ width: "0%" }, 0);
         clearInterval(counter);
