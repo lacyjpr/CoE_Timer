@@ -3,9 +3,9 @@ $(document).ready(function() {
   var workTime = 12;
   var state = "";
   var counter;
-  var ding = new Audio("../src/media/End.mp3");
-  var ready = new Audio("../src/media/get_ready.mp3");
-  var attack = new Audio("../src/media/shotgun.mp3");
+  var ding = new Audio("/CoE_Timer/media/End.mp3");
+  var ready = new Audio("/CoE_Timer/media/get_ready.mp3");
+  var attack = new Audio("/CoE_Timer/media/shotgun.mp3");
 
   // Reset to original values
   $(".reset").on("click", function() {
