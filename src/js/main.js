@@ -12,7 +12,7 @@ $(document).ready(function() {
     state = "";
     $(".breakTime").html(breakTime);
     $(".workTime").html(workTime);
-    $(".content").html("12:00");
+    $(".content").html("00:12");
     clearInterval(counter);
     $(".progress").stop(true, true);
     $(".progress").animate({ width: "0%" }, 0);
@@ -66,7 +66,7 @@ $(document).ready(function() {
         $(".getToWork").addClass("hidden");
         $(".progress").animate({ width: "0%" }, 0);
         clearInterval(counter);
-        breakTimer(breakTime + ":00");
+        breakTimer("00:" + breakTime);
         //ding.play();
       }
       $(".content").html(toMinutes(time));
@@ -89,7 +89,7 @@ $(document).ready(function() {
         $(".takeABreak").addClass("hidden");
         $(".breakTimer").animate({ width: "0%" }, 0);
         clearInterval(counter);
-        workTimer(workTime + ":00");
+        workTimer("00:" + workTime);
       }
       $(".content").html(toMinutes(time));
     }, 1000);
@@ -107,6 +107,6 @@ $(document).ready(function() {
     var minutes = Math.floor(val / 60);
     var seconds = val - minutes * 60;
     seconds = seconds < 10 ? "0" + seconds : seconds;
-    return minutes + ":" + seconds;
+    return "00:" + seconds;
   }
 });
