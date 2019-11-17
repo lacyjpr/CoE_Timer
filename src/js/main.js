@@ -5,36 +5,6 @@ $(document).ready(function() {
   var counter;
   var ding = new Audio("../src/media/alarm.mp3");
 
-  // Increment/decrement break time
-  $(".breakPlus").on("click", function() {
-    if (breakTime < 999 && state !== "running") {
-      breakTime++;
-      $(".breakTime").html(breakTime);
-    }
-  });
-  $(".breakMinus").on("click", function() {
-    if (breakTime > 1 && state !== "running") {
-      breakTime--;
-      $(".breakTime").html(breakTime);
-    }
-  });
-
-  // Increment/decrement work time
-  $(".workPlus").on("click", function() {
-    if (workTime < 999 && state !== "running") {
-      workTime++;
-      $(".workTime").html(workTime);
-      $(".content").html(workTime + ":00");
-    }
-  });
-  $(".workMinus").on("click", function() {
-    if (workTime > 1 && state !== "running") {
-      workTime--;
-      $(".workTime").html(workTime);
-      $(".content").html(workTime + ":00");
-    }
-  });
-
   // Reset to original values
   $(".reset").on("click", function() {
     breakTime = 4;
@@ -42,7 +12,7 @@ $(document).ready(function() {
     state = "";
     $(".breakTime").html(breakTime);
     $(".workTime").html(workTime);
-    $(".content").html("25:00");
+    $(".content").html("12:00");
     clearInterval(counter);
     $(".progress").stop(true, true);
     $(".progress").animate({ width: "0%" }, 0);
@@ -97,7 +67,7 @@ $(document).ready(function() {
         $(".progress").animate({ width: "0%" }, 0);
         clearInterval(counter);
         breakTimer(breakTime + ":00");
-        ding.play();
+        //ding.play();
       }
       $(".content").html(toMinutes(time));
     }, 1000);
@@ -106,7 +76,7 @@ $(document).ready(function() {
   function breakTimer(val) {
     ding.play();
     $(".takeABreak").removeClass("hidden");
-    $(".breakTimer").animate({ width: "100%" }, toSeconds(val) * 1000); //, (toSeconds(val) * 1000));
+    $(".breakTimer").animate({ width: "100%" }, toSeconds(val) * 1000);
     $(".breakTimer").queue(function() {
       var that = $(this);
       that.dequeue();
@@ -115,7 +85,7 @@ $(document).ready(function() {
     counter = setInterval(function() {
       time = time - 1;
       if (time <= 0) {
-        ding.play();
+        //ding.play();
         $(".takeABreak").addClass("hidden");
         $(".breakTimer").animate({ width: "0%" }, 0);
         clearInterval(counter);
