@@ -1,6 +1,13 @@
+Convention of Elements timer for Diablo 3 Demon Hunters
 https://lacyjpr.github.io/CoE_Timer/
 
-Convention of Elements timer for Diablo 3 Demon Hunters
+Semi-Failed experiment: 
+
+Timer becomes off-beat when you change levels in a rift. 
+You can reset the timer each level but I prefer not to waste time.
+
+
+
 
 Sound Credits:
 "Change Light Bulb Sound" by Mike Koenig, http://soundbible.com/2116-Change-Light-Bulb.html
